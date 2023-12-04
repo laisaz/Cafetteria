@@ -28,5 +28,10 @@ namespace Cafetteria
                 Application.Exit();
             }
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

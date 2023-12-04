@@ -24,7 +24,35 @@ namespace Cafetteria
 
         private void btnCadastrarForn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ConexaoSQL.Conectar();
 
+                String sql = @"INSERT INTO caf.Fornecedor VALUES (@CNPJ, @Nome, @Razao, @Contato, @Endereco)";
+
+                SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
+                cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
+                cmd.Parameters.AddWithValue("Nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("Razao", txtRazao.Text);
+                cmd.Parameters.AddWithValue("Contato", txtCont.Text);
+                cmd.Parameters.AddWithValue("Endereco", txtEnder.Text);
+
+
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Fornecedor cadastrado com sucesso");
+
+                Conexão.Fechar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro" + ex.Message);
+            }
+            finally
+            {
+                Conexão.Fechar();
+            }
         }
 
         private void btnAltrarExcluir_Click(object sender, EventArgs e)
