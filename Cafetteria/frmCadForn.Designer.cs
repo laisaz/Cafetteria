@@ -39,16 +39,18 @@
             this.txtCNPJ = new System.Windows.Forms.TextBox();
             this.lblCNPJ = new System.Windows.Forms.Label();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblCadFunc = new System.Windows.Forms.Label();
+            this.pnlBottom = new System.Windows.Forms.Panel();
+            this.btnCadastrarForn = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbLogoCafe = new System.Windows.Forms.PictureBox();
-            this.lblCadFunc = new System.Windows.Forms.Label();
             this.btnAltrarExcluir = new System.Windows.Forms.Button();
             this.pcbLimpar = new System.Windows.Forms.PictureBox();
-            this.btnCadastrarForn = new System.Windows.Forms.Button();
-            this.pnlBottom = new System.Windows.Forms.Panel();
+            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLimpar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEndereco
@@ -151,6 +153,7 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.pnlTop.Controls.Add(this.pcbSair);
             this.pnlTop.Controls.Add(this.btnCancelar);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -158,6 +161,46 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(657, 53);
             this.pnlTop.TabIndex = 43;
+            // 
+            // lblCadFunc
+            // 
+            this.lblCadFunc.AutoSize = true;
+            this.lblCadFunc.BackColor = System.Drawing.Color.Transparent;
+            this.lblCadFunc.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblCadFunc.Location = new System.Drawing.Point(235, 115);
+            this.lblCadFunc.Name = "lblCadFunc";
+            this.lblCadFunc.Size = new System.Drawing.Size(251, 22);
+            this.lblCadFunc.TabIndex = 38;
+            this.lblCadFunc.Text = "Cadastro de Fornecedor\r\n";
+            // 
+            // pnlBottom
+            // 
+            this.pnlBottom.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBottom.Location = new System.Drawing.Point(0, 475);
+            this.pnlBottom.Name = "pnlBottom";
+            this.pnlBottom.Size = new System.Drawing.Size(657, 17);
+            this.pnlBottom.TabIndex = 48;
+            // 
+            // btnCadastrarForn
+            // 
+            this.btnCadastrarForn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCadastrarForn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarForn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCadastrarForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarForn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCadastrarForn.Image = global::Cafetteria.Properties.Resources.cadastro__1_;
+            this.btnCadastrarForn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarForn.Location = new System.Drawing.Point(478, 396);
+            this.btnCadastrarForn.Name = "btnCadastrarForn";
+            this.btnCadastrarForn.Size = new System.Drawing.Size(145, 36);
+            this.btnCadastrarForn.TabIndex = 5;
+            this.btnCadastrarForn.Text = "Cadastrar";
+            this.btnCadastrarForn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarForn.UseVisualStyleBackColor = false;
+            this.btnCadastrarForn.Click += new System.EventHandler(this.btnCadastrarForn_Click);
             // 
             // btnCancelar
             // 
@@ -188,18 +231,6 @@
             this.pcbLogoCafe.TabIndex = 39;
             this.pcbLogoCafe.TabStop = false;
             // 
-            // lblCadFunc
-            // 
-            this.lblCadFunc.AutoSize = true;
-            this.lblCadFunc.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadFunc.Font = new System.Drawing.Font("Lucida Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblCadFunc.Location = new System.Drawing.Point(235, 115);
-            this.lblCadFunc.Name = "lblCadFunc";
-            this.lblCadFunc.Size = new System.Drawing.Size(251, 22);
-            this.lblCadFunc.TabIndex = 38;
-            this.lblCadFunc.Text = "Cadastro de Fornecedor\r\n";
-            // 
             // btnAltrarExcluir
             // 
             this.btnAltrarExcluir.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -210,7 +241,7 @@
             this.btnAltrarExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnAltrarExcluir.Image = global::Cafetteria.Properties.Resources.alterar__1_;
             this.btnAltrarExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAltrarExcluir.Location = new System.Drawing.Point(303, 417);
+            this.btnAltrarExcluir.Location = new System.Drawing.Point(326, 396);
             this.btnAltrarExcluir.Name = "btnAltrarExcluir";
             this.btnAltrarExcluir.Size = new System.Drawing.Size(146, 36);
             this.btnAltrarExcluir.TabIndex = 7;
@@ -229,33 +260,16 @@
             this.pcbLimpar.TabIndex = 47;
             this.pcbLimpar.TabStop = false;
             // 
-            // btnCadastrarForn
+            // pcbSair
             // 
-            this.btnCadastrarForn.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCadastrarForn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarForn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCadastrarForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarForn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCadastrarForn.Image = global::Cafetteria.Properties.Resources.cadastro__1_;
-            this.btnCadastrarForn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrarForn.Location = new System.Drawing.Point(455, 417);
-            this.btnCadastrarForn.Name = "btnCadastrarForn";
-            this.btnCadastrarForn.Size = new System.Drawing.Size(145, 36);
-            this.btnCadastrarForn.TabIndex = 5;
-            this.btnCadastrarForn.Text = "Cadastrar";
-            this.btnCadastrarForn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarForn.UseVisualStyleBackColor = false;
-            this.btnCadastrarForn.Click += new System.EventHandler(this.btnCadastrarForn_Click);
-            // 
-            // pnlBottom
-            // 
-            this.pnlBottom.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 475);
-            this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(657, 17);
-            this.pnlBottom.TabIndex = 48;
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(611, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 84;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
             // frmCadForn
             // 
@@ -291,6 +305,7 @@
             this.pnlTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLimpar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,12 +324,13 @@
         private System.Windows.Forms.TextBox txtCNPJ;
         private System.Windows.Forms.Label lblCNPJ;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Button btnAltrarExcluir;
         private System.Windows.Forms.PictureBox pcbLimpar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCadastrarForn;
         private System.Windows.Forms.PictureBox pcbLogoCafe;
         private System.Windows.Forms.Label lblCadFunc;
         private System.Windows.Forms.Panel pnlBottom;
+        private System.Windows.Forms.PictureBox pcbSair;
+        private System.Windows.Forms.Button btnAltrarExcluir;
     }
 }
