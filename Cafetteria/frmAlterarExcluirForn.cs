@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Cafetteria
 {
-    public partial class frmEstoque : Form
+    public partial class frmAlterarExcluirForn : Form
     {
-        public frmEstoque()
+        public frmAlterarExcluirForn()
         {
             InitializeComponent();
-        }
-
-        private void lblCadFunc_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pcbSair_Click(object sender, EventArgs e)

@@ -74,6 +74,7 @@
             this.pcbSair.Size = new System.Drawing.Size(34, 32);
             this.pcbSair.TabIndex = 97;
             this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
             // pcbVoltar
             // 
@@ -230,7 +231,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Cafetteria.Properties.Resources.logo_cafetteria;
-            this.pictureBox1.Location = new System.Drawing.Point(607, 458);
+            this.pictureBox1.Location = new System.Drawing.Point(607, 454);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

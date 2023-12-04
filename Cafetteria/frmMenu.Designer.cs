@@ -68,9 +68,9 @@
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnLogin.Image = global::Cafetteria.Properties.Resources._3364044__1_;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(597, 4);
+            this.btnLogin.Location = new System.Drawing.Point(597, 12);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(48, 40);
+            this.btnLogin.Size = new System.Drawing.Size(48, 31);
             this.btnLogin.TabIndex = 26;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLogin.UseVisualStyleBackColor = false;
