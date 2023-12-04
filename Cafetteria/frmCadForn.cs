@@ -31,5 +31,17 @@ namespace Cafetteria
         {
 
         }
+
+        private void pcbSair_Click(object sender, EventArgs e)
+        {
+            DialogResult sair =
+         MessageBox.Show("Você deseja realmente sair do aplicativo?",
+                    "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (sair == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }

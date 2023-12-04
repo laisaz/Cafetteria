@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAlterarExcluirForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarExcluirForn.Designer.cs">
+      <DependentUpon>frmAlterarExcluirForn.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadForn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterarExcluirForn.resx">
+      <DependentUpon>frmAlterarExcluirForn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadForn.resx">
       <DependentUpon>frmCadForn.cs</DependentUpon>

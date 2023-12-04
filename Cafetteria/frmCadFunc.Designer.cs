@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.pcbSair = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCadFunc = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -48,16 +50,14 @@
             this.txtContato = new System.Windows.Forms.TextBox();
             this.erpPreencherCampos = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCadastrarFunc = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.pcbLogoCafe = new System.Windows.Forms.PictureBox();
             this.btnAltrarExcluir = new System.Windows.Forms.Button();
             this.pcbLimpar = new System.Windows.Forms.PictureBox();
-            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPreencherCampos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLimpar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -71,6 +71,36 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(657, 56);
             this.pnlTop.TabIndex = 13;
+            // 
+            // pcbSair
+            // 
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(611, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 83;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(12, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(39, 31);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblCadFunc
             // 
@@ -250,25 +280,6 @@
             this.btnCadastrarFunc.UseVisualStyleBackColor = false;
             this.btnCadastrarFunc.Click += new System.EventHandler(this.btnCadastrarFunc_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(39, 31);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // pcbLogoCafe
             // 
             this.pcbLogoCafe.Image = global::Cafetteria.Properties.Resources.logo_cafetteria;
@@ -309,16 +320,6 @@
             this.pcbLimpar.TabStop = false;
             this.pcbLimpar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pcbSair
-            // 
-            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
-            this.pcbSair.Location = new System.Drawing.Point(611, 12);
-            this.pcbSair.Name = "pcbSair";
-            this.pcbSair.Size = new System.Drawing.Size(34, 32);
-            this.pcbSair.TabIndex = 83;
-            this.pcbSair.TabStop = false;
-            // 
             // frmCadFunc
             // 
             this.AcceptButton = this.btnCadastrarFunc;
@@ -356,10 +357,10 @@
             this.Text = "frmCadFunc";
             this.Load += new System.EventHandler(this.frmCadFunc_Load);
             this.pnlTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpPreencherCampos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLimpar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
