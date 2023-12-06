@@ -16,7 +16,7 @@ namespace Cafetteria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmExcluirAlterar());
+            Application.Run(new frmCadForn());
         }
     }
 }

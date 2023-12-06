@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,9 +34,9 @@ namespace Cafetteria
                 SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
                 cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
                 cmd.Parameters.AddWithValue("Nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("Razao", txtRazao.Text);
-                cmd.Parameters.AddWithValue("Contato", txtCont.Text);
-                cmd.Parameters.AddWithValue("Endereco", txtEnder.Text);
+                cmd.Parameters.AddWithValue("Razao", txtRazaoSocial.Text);
+                cmd.Parameters.AddWithValue("Contato", txtContato.Text);
+                cmd.Parameters.AddWithValue("Endereco", txtEndereco.Text);
 
 
 
@@ -43,7 +44,7 @@ namespace Cafetteria
 
                 MessageBox.Show("Fornecedor cadastrado com sucesso");
 
-                Conexão.Fechar();
+                ConexaoSQL.Fechar();
             }
             catch (Exception ex)
             {
@@ -51,7 +52,7 @@ namespace Cafetteria
             }
             finally
             {
-                Conexão.Fechar();
+                ConexaoSQL.Fechar();
             }
         }
 
