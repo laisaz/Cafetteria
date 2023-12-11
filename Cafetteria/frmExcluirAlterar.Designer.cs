@@ -44,7 +44,6 @@
             this.lblContato = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblFazerBusca = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblDadosFunc = new System.Windows.Forms.Label();
             this.lblExpressoEncantado = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.pcbSair = new System.Windows.Forms.PictureBox();
+            this.lblFazerBusca = new System.Windows.Forms.Label();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
@@ -223,17 +223,6 @@
             this.lblNome.TabIndex = 65;
             this.lblNome.Text = "Nome:";
             // 
-            // lblFazerBusca
-            // 
-            this.lblFazerBusca.AutoSize = true;
-            this.lblFazerBusca.Font = new System.Drawing.Font("Kristen ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFazerBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFazerBusca.Location = new System.Drawing.Point(88, 96);
-            this.lblFazerBusca.Name = "lblFazerBusca";
-            this.lblFazerBusca.Size = new System.Drawing.Size(73, 22);
-            this.lblFazerBusca.TabIndex = 73;
-            this.lblFazerBusca.Text = "Buscar:";
-            // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
@@ -358,6 +347,17 @@
             this.pcbSair.TabStop = false;
             this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
+            // lblFazerBusca
+            // 
+            this.lblFazerBusca.AutoSize = true;
+            this.lblFazerBusca.Font = new System.Drawing.Font("Kristen ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFazerBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblFazerBusca.Location = new System.Drawing.Point(88, 96);
+            this.lblFazerBusca.Name = "lblFazerBusca";
+            this.lblFazerBusca.Size = new System.Drawing.Size(73, 22);
+            this.lblFazerBusca.TabIndex = 73;
+            this.lblFazerBusca.Text = "Buscar:";
+            // 
             // frmExcluirAlterar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,7 +419,6 @@
         private System.Windows.Forms.Label lblContato;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblFazerBusca;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Label lblCPF;
@@ -429,5 +428,6 @@
         private System.Windows.Forms.PictureBox pcbLogoCafe;
         private System.Windows.Forms.PictureBox pcbSair;
         private System.Windows.Forms.DataGridView dgvFunc;
+        private System.Windows.Forms.Label lblFazerBusca;
     }
 }
