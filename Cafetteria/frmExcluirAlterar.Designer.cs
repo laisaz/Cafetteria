@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExcluirAlterar));
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.dgvFunc = new System.Windows.Forms.DataGridView();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.txtContato = new System.Windows.Forms.TextBox();
@@ -53,11 +56,10 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBottom
@@ -72,6 +74,7 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.pnlTop.Controls.Add(this.btnCancelar);
             this.pnlTop.Controls.Add(this.pcbSair);
             this.pnlTop.Controls.Add(this.dgvFunc);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,6 +83,35 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(657, 49);
             this.pnlTop.TabIndex = 44;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(12, 11);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(39, 33);
+            this.btnCancelar.TabIndex = 82;
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // pcbSair
+            // 
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(603, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 82;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
             // dgvFunc
             // 
@@ -96,6 +128,7 @@
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(275, 26);
             this.txtCPF.TabIndex = 0;
+            this.txtCPF.TextChanged += new System.EventHandler(this.txtCPF_TextChanged);
             // 
             // txtContato
             // 
@@ -347,17 +380,6 @@
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // pcbSair
-            // 
-            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
-            this.pcbSair.Location = new System.Drawing.Point(611, 12);
-            this.pcbSair.Name = "pcbSair";
-            this.pcbSair.Size = new System.Drawing.Size(34, 32);
-            this.pcbSair.TabIndex = 82;
-            this.pcbSair.TabStop = false;
-            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
-            // 
             // frmExcluirAlterar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,13 +411,14 @@
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlBottom);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmExcluirAlterar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExcluirAlterar";
             this.pnlTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,5 +452,6 @@
         private System.Windows.Forms.PictureBox pcbLogoCafe;
         private System.Windows.Forms.PictureBox pcbSair;
         private System.Windows.Forms.DataGridView dgvFunc;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
