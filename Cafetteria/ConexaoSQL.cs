@@ -10,7 +10,7 @@ namespace Cafetteria
     public static class ConexaoSQL
     {
         public static SqlConnection conn;
-        public static string conexao = @"Data Source=SJC0562927W10-1;
+        public static string conexao = @"Data Source=SJC0562926W10-1;
                                         Initial Catalog = Cafetteria;
                                         User Id = sa;
                                         Password = Senac123";

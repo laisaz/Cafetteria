@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProd));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pcbSair = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -148,6 +149,7 @@
             this.btnCadastrarProd.Text = "Cadastrar";
             this.btnCadastrarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProd.UseVisualStyleBackColor = false;
+            this.btnCadastrarProd.Click += new System.EventHandler(this.btnCadastrarProd_Click);
             // 
             // pcbLogoCafe
             // 
@@ -294,6 +296,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCadProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

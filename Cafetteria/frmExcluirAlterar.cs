@@ -208,5 +208,10 @@ namespace Cafetteria
                 Close();
             }
         }
+
+        private void txtCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
