@@ -38,12 +38,34 @@ namespace Cafetteria
 
         private void pcbVoltar_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void btnCadFunc_Click(object sender, EventArgs e)
         {
-          
+            
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCadProd_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btnCadForn_Click(object sender, EventArgs e)
+        {
+           
+            
         }
     }
 }

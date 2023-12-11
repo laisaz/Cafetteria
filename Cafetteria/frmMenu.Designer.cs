@@ -165,6 +165,7 @@
             this.btnCadForn.Text = "CADASTRO DE \r\nFORNECEDOR";
             this.btnCadForn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadForn.UseVisualStyleBackColor = false;
+            this.btnCadForn.Click += new System.EventHandler(this.btnCadForn_Click);
             // 
             // btnFazerPedido
             // 
@@ -199,6 +200,7 @@
             this.btnCadProd.Text = "CADASTRO DE\r\nPRODUTO\r\n";
             this.btnCadProd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadProd.UseVisualStyleBackColor = false;
+            this.btnCadProd.Click += new System.EventHandler(this.btnCadProd_Click);
             // 
             // btnEstoque
             // 
@@ -216,6 +218,7 @@
             this.btnEstoque.Text = "ESTOQUE";
             this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // btnCaixa
             // 
@@ -233,6 +236,7 @@
             this.btnCaixa.Text = "CAIXA";
             this.btnCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCaixa.UseVisualStyleBackColor = false;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // pcbLogoCafe
             // 
