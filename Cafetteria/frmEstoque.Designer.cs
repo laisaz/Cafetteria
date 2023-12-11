@@ -123,7 +123,7 @@
             this.lblIDProd.BackColor = System.Drawing.Color.Transparent;
             this.lblIDProd.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDProd.ForeColor = System.Drawing.Color.Black;
-            this.lblIDProd.Location = new System.Drawing.Point(199, 179);
+            this.lblIDProd.Location = new System.Drawing.Point(197, 188);
             this.lblIDProd.Name = "lblIDProd";
             this.lblIDProd.Size = new System.Drawing.Size(101, 18);
             this.lblIDProd.TabIndex = 76;
@@ -135,7 +135,7 @@
             this.lblForn.BackColor = System.Drawing.Color.Transparent;
             this.lblForn.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForn.ForeColor = System.Drawing.Color.Black;
-            this.lblForn.Location = new System.Drawing.Point(194, 225);
+            this.lblForn.Location = new System.Drawing.Point(194, 234);
             this.lblForn.Name = "lblForn";
             this.lblForn.Size = new System.Drawing.Size(104, 18);
             this.lblForn.TabIndex = 77;

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,12 @@
     <Compile Include="frmCadFunc.Designer.cs">
       <DependentUpon>frmCadFunc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadProd.Designer.cs">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,12 @@
     </Compile>
     <Compile Include="frmExcluirAlterar.Designer.cs">
       <DependentUpon>frmExcluirAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFazerPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFazerPedido.Designer.cs">
+      <DependentUpon>frmFazerPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenu.cs">
       <SubType>Form</SubType>
@@ -103,11 +116,17 @@
     <EmbeddedResource Include="frmCadFunc.resx">
       <DependentUpon>frmCadFunc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCadProd.resx">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmExcluirAlterar.resx">
       <DependentUpon>frmExcluirAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFazerPedido.resx">
+      <DependentUpon>frmFazerPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
