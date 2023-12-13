@@ -141,5 +141,10 @@ namespace Cafetteria
                 ConexaoSQL.Fechar();
             }
         }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

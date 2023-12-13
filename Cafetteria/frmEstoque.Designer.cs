@@ -84,6 +84,7 @@
             this.pcbVoltar.Size = new System.Drawing.Size(33, 30);
             this.pcbVoltar.TabIndex = 96;
             this.pcbVoltar.TabStop = false;
+            this.pcbVoltar.Click += new System.EventHandler(this.pcbVoltar_Click);
             // 
             // lblFazerBusca
             // 
