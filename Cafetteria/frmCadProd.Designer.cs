@@ -30,13 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProd));
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.pcbSair = new System.Windows.Forms.PictureBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAltrarExcluir = new System.Windows.Forms.Button();
-            this.pcbLimpar = new System.Windows.Forms.PictureBox();
             this.pnlBottom = new System.Windows.Forms.Panel();
-            this.btnCadastrarProd = new System.Windows.Forms.Button();
-            this.pcbLogoCafe = new System.Windows.Forms.PictureBox();
             this.lblCadProd = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -48,10 +42,16 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.txtCNPJ = new System.Windows.Forms.TextBox();
+            this.pcbLogoCafe = new System.Windows.Forms.PictureBox();
+            this.pcbSair = new System.Windows.Forms.PictureBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAltrarExcluir = new System.Windows.Forms.Button();
+            this.pcbLimpar = new System.Windows.Forms.PictureBox();
+            this.btnCadastrarProd = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLimpar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -65,63 +65,6 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(657, 56);
             this.pnlTop.TabIndex = 41;
-            // 
-            // pcbSair
-            // 
-            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
-            this.pcbSair.Location = new System.Drawing.Point(611, 12);
-            this.pcbSair.Name = "pcbSair";
-            this.pcbSair.Size = new System.Drawing.Size(34, 32);
-            this.pcbSair.TabIndex = 83;
-            this.pcbSair.TabStop = false;
-            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(39, 31);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnAltrarExcluir
-            // 
-            this.btnAltrarExcluir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAltrarExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAltrarExcluir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAltrarExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAltrarExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAltrarExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnAltrarExcluir.Image = global::Cafetteria.Properties.Resources.alterar__1_;
-            this.btnAltrarExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAltrarExcluir.Location = new System.Drawing.Point(308, 423);
-            this.btnAltrarExcluir.Name = "btnAltrarExcluir";
-            this.btnAltrarExcluir.Size = new System.Drawing.Size(146, 36);
-            this.btnAltrarExcluir.TabIndex = 40;
-            this.btnAltrarExcluir.Text = "Alterar/Excluir";
-            this.btnAltrarExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltrarExcluir.UseVisualStyleBackColor = false;
-            // 
-            // pcbLimpar
-            // 
-            this.pcbLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbLimpar.Image = global::Cafetteria.Properties.Resources.borracha__1_;
-            this.pcbLimpar.Location = new System.Drawing.Point(12, 433);
-            this.pcbLimpar.Name = "pcbLimpar";
-            this.pcbLimpar.Size = new System.Drawing.Size(39, 36);
-            this.pcbLimpar.TabIndex = 43;
-            this.pcbLimpar.TabStop = false;
             // 
             // pnlBottom
             // 
@@ -270,6 +213,95 @@
             this.txtCNPJ.Size = new System.Drawing.Size(205, 26);
             this.txtCNPJ.TabIndex = 55;
             // 
+            // pcbLogoCafe
+            // 
+            this.pcbLogoCafe.Image = global::Cafetteria.Properties.Resources.logo_cafetteria;
+            this.pcbLogoCafe.Location = new System.Drawing.Point(194, 103);
+            this.pcbLogoCafe.Name = "pcbLogoCafe";
+            this.pcbLogoCafe.Size = new System.Drawing.Size(38, 33);
+            this.pcbLogoCafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogoCafe.TabIndex = 47;
+            this.pcbLogoCafe.TabStop = false;
+            // 
+            // pcbSair
+            // 
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(611, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 83;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(12, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(39, 31);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnAltrarExcluir
+            // 
+            this.btnAltrarExcluir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAltrarExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAltrarExcluir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAltrarExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAltrarExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAltrarExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAltrarExcluir.Image = global::Cafetteria.Properties.Resources.alterar__1_;
+            this.btnAltrarExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAltrarExcluir.Location = new System.Drawing.Point(308, 423);
+            this.btnAltrarExcluir.Name = "btnAltrarExcluir";
+            this.btnAltrarExcluir.Size = new System.Drawing.Size(146, 36);
+            this.btnAltrarExcluir.TabIndex = 40;
+            this.btnAltrarExcluir.Text = "Alterar/Excluir";
+            this.btnAltrarExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAltrarExcluir.UseVisualStyleBackColor = false;
+            this.btnAltrarExcluir.Click += new System.EventHandler(this.btnAltrarExcluir_Click);
+            // 
+            // pcbLimpar
+            // 
+            this.pcbLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbLimpar.Image = global::Cafetteria.Properties.Resources.borracha__1_;
+            this.pcbLimpar.Location = new System.Drawing.Point(12, 433);
+            this.pcbLimpar.Name = "pcbLimpar";
+            this.pcbLimpar.Size = new System.Drawing.Size(39, 36);
+            this.pcbLimpar.TabIndex = 43;
+            this.pcbLimpar.TabStop = false;
+            this.pcbLimpar.Click += new System.EventHandler(this.pcbLimpar_Click);
+            // 
+            // btnCadastrarProd
+            // 
+            this.btnCadastrarProd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCadastrarProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarProd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCadastrarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCadastrarProd.Image = global::Cafetteria.Properties.Resources.cadastro__1_;
+            this.btnCadastrarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarProd.Location = new System.Drawing.Point(460, 423);
+            this.btnCadastrarProd.Name = "btnCadastrarProd";
+            this.btnCadastrarProd.Size = new System.Drawing.Size(145, 36);
+            this.btnCadastrarProd.TabIndex = 39;
+            this.btnCadastrarProd.Text = "Cadastrar";
+            this.btnCadastrarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarProd.UseVisualStyleBackColor = false;
+            this.btnCadastrarProd.Click += new System.EventHandler(this.btnCadastrarProd_Click);
+            // 
             // frmCadProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -302,9 +334,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadProd";
             this.pnlTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLimpar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

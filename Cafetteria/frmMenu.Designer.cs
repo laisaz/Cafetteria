@@ -184,6 +184,7 @@
             this.btnFazerPedido.Text = "FAZER PEDIDO \r\n(PRODUTO)\r\n";
             this.btnFazerPedido.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFazerPedido.UseVisualStyleBackColor = false;
+            this.btnFazerPedido.Click += new System.EventHandler(this.btnFazerPedido_Click);
             // 
             // btnCadProd
             // 

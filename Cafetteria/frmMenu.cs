@@ -38,34 +38,51 @@ namespace Cafetteria
 
         private void pcbVoltar_Click(object sender, EventArgs e)
         {
-           
+         
         }
 
         private void btnCadFunc_Click(object sender, EventArgs e)
         {
-            
+            frmCadFunc cadfun = new frmCadFunc();
+            this.Hide();
+            cadfun.ShowDialog();
         }
 
         private void btnCaixa_Click(object sender, EventArgs e)
         {
-
+            frmCaixa caixa = new frmCaixa();
+            this.Hide();
+            caixa.ShowDialog();
         }
 
         private void btnCadProd_Click(object sender, EventArgs e)
         {
-            
+            frmCadProd cadprod = new frmCadProd();
+            this.Hide();
+            cadprod.ShowDialog();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            
+            frmEstoque estoque = new frmEstoque();
+            this.Hide();
+            estoque.ShowDialog();
 
         }
 
         private void btnCadForn_Click(object sender, EventArgs e)
         {
-           
+            frmCadForn cadforn = new frmCadForn();
+            this.Hide();
+            cadforn.ShowDialog();
             
+        }
+
+        private void btnFazerPedido_Click(object sender, EventArgs e)
+        {
+            frmFazerPedido pedido = new frmFazerPedido();
+            this.Hide();
+            pedido.ShowDialog();
         }
     }
 }
