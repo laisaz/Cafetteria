@@ -57,6 +57,8 @@ namespace Cafetteria
             txtCPFCliente.Clear();
             txtNumProd.Clear();
             txtTotal.Clear();
+            lstPrice.Items.Clear();
+            lstProd.Items.Clear();
 
         }
 
@@ -142,9 +144,15 @@ namespace Cafetteria
             }
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnComprar_Click(object sender, EventArgs e)
         {
 
+        }
         }
     }
 }
