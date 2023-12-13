@@ -30,10 +30,13 @@
         {
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pcbSair = new System.Windows.Forms.PictureBox();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCadProd = new System.Windows.Forms.Label();
             this.txtNumProd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lstPrice = new System.Windows.Forms.ListBox();
+            this.lstProd = new System.Windows.Forms.ListBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -45,16 +48,13 @@
             this.btnCancela = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lstProd = new System.Windows.Forms.ListBox();
-            this.lstPrice = new System.Windows.Forms.ListBox();
-            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -81,6 +81,14 @@
             this.pcbSair.TabStop = false;
             this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
+            // dgvProduct
+            // 
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Location = new System.Drawing.Point(600, 12);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.Size = new System.Drawing.Size(23, 10);
+            this.dgvProduct.TabIndex = 90;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
@@ -98,6 +106,7 @@
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblCadProd
             // 
@@ -137,6 +146,26 @@
             this.groupBox1.TabIndex = 77;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lstPrice
+            // 
+            this.lstPrice.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstPrice.FormattingEnabled = true;
+            this.lstPrice.ItemHeight = 18;
+            this.lstPrice.Location = new System.Drawing.Point(322, 100);
+            this.lstPrice.Name = "lstPrice";
+            this.lstPrice.Size = new System.Drawing.Size(223, 130);
+            this.lstPrice.TabIndex = 87;
+            // 
+            // lstProd
+            // 
+            this.lstProd.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstProd.FormattingEnabled = true;
+            this.lstProd.ItemHeight = 18;
+            this.lstProd.Location = new System.Drawing.Point(80, 100);
+            this.lstProd.Name = "lstProd";
+            this.lstProd.Size = new System.Drawing.Size(223, 130);
+            this.lstProd.TabIndex = 86;
             // 
             // lblNome
             // 
@@ -282,34 +311,6 @@
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
             // 
-            // lstProd
-            // 
-            this.lstProd.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstProd.FormattingEnabled = true;
-            this.lstProd.ItemHeight = 18;
-            this.lstProd.Location = new System.Drawing.Point(80, 100);
-            this.lstProd.Name = "lstProd";
-            this.lstProd.Size = new System.Drawing.Size(223, 130);
-            this.lstProd.TabIndex = 86;
-            // 
-            // lstPrice
-            // 
-            this.lstPrice.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstPrice.FormattingEnabled = true;
-            this.lstPrice.ItemHeight = 18;
-            this.lstPrice.Location = new System.Drawing.Point(322, 100);
-            this.lstPrice.Name = "lstPrice";
-            this.lstPrice.Size = new System.Drawing.Size(223, 130);
-            this.lstPrice.TabIndex = 87;
-            // 
-            // dgvProduct
-            // 
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Location = new System.Drawing.Point(600, 12);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(23, 10);
-            this.dgvProduct.TabIndex = 90;
-            // 
             // txtTotal
             // 
             this.txtTotal.Location = new System.Drawing.Point(113, 419);
@@ -341,11 +342,11 @@
             this.Text = "frmCaixa";
             this.pnlTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
