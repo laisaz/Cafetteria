@@ -150,15 +150,23 @@ namespace Cafetteria
                 txtCNPJ.Clear();
                 txtQuantidade.Clear();
                 txtTotalCompra.Clear();
+                txtIDProd.Clear();
+
             }
         }
 
         private void pcbVoltar_Click(object sender, EventArgs e)
         {
-
             frmMenu menu = new frmMenu();
-            menu.Show();
-            this.Close();
+            this.Hide();
+            menu.ShowDialog();
+        }
+
+        private void dgvProdutosForn_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // dgvProdutosForn.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //dgvProdutosForn.Rows.Clear();
+            //dgvProdutosForn.Refresh();
         }
     }
 }

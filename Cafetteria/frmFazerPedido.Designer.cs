@@ -142,9 +142,9 @@
             this.lblProduto.ForeColor = System.Drawing.Color.DimGray;
             this.lblProduto.Location = new System.Drawing.Point(128, 263);
             this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(268, 23);
+            this.lblProduto.Size = new System.Drawing.Size(231, 23);
             this.lblProduto.TabIndex = 103;
-            this.lblProduto.Text = "Fazer pedido NOVO produto:";
+            this.lblProduto.Text = "Fazer pedido de produto:";
             // 
             // dgvProdutosForn
             // 
@@ -156,6 +156,7 @@
             this.dgvProdutosForn.ReadOnly = true;
             this.dgvProdutosForn.Size = new System.Drawing.Size(479, 114);
             this.dgvProdutosForn.TabIndex = 104;
+            this.dgvProdutosForn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutosForn_CellContentClick);
             // 
             // lblNome
             // 

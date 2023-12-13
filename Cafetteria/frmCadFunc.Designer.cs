@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadFunc));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pcbSair = new System.Windows.Forms.PictureBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.lblCadFunc = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             // 
             this.pnlTop.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pnlTop.Controls.Add(this.pcbSair);
-            this.pnlTop.Controls.Add(this.btnCancelar);
+            this.pnlTop.Controls.Add(this.btnVoltar);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -84,24 +84,24 @@
             this.pcbSair.TabStop = false;
             this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
-            // btnCancelar
+            // btnVoltar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(39, 31);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnVoltar.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnVoltar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(39, 31);
+            this.btnVoltar.TabIndex = 8;
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblCadFunc
             // 
@@ -327,7 +327,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.CancelButton = this.btnCancelar;
+            this.CancelButton = this.btnVoltar;
             this.ClientSize = new System.Drawing.Size(657, 492);
             this.Controls.Add(this.pcbLogoCafe);
             this.Controls.Add(this.btnAltrarExcluir);
@@ -384,7 +384,7 @@
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblCadFunc;
         private System.Windows.Forms.Button btnCadastrarFunc;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.PictureBox pcbLogoCafe;
         private System.Windows.Forms.Label lblSenha;

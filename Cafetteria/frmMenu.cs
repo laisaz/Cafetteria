@@ -38,7 +38,9 @@ namespace Cafetteria
 
         private void pcbVoltar_Click(object sender, EventArgs e)
         {
-         
+            this.Hide();
+            frmLogin menu = new frmLogin();
+            menu.ShowDialog();
         }
 
         private void btnCadFunc_Click(object sender, EventArgs e)
