@@ -53,5 +53,10 @@ namespace Cafetteria
         {
 
         }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

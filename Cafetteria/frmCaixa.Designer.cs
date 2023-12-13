@@ -261,6 +261,7 @@
             this.btnComprar.Text = "Comprar";
             this.btnComprar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // pictureBox1
             // 

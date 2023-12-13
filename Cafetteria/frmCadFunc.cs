@@ -84,6 +84,10 @@ namespace Cafetteria
             {
                 MessageBox.Show("Erro" + ex.Message);
             }
+            finally
+            {
+                ConexaoSQL.Fechar();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
