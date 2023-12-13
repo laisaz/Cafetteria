@@ -39,5 +39,12 @@ namespace Cafetteria
         {
             
         }
+
+        private void pcbVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenu menu = new frmMenu();
+            menu.ShowDialog();
+        }
     }
 }

@@ -20,7 +20,9 @@ namespace Cafetteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmMenu menu = new frmMenu();
+            menu.ShowDialog();
         }
 
         private void btnCadastrarForn_Click(object sender, EventArgs e)
