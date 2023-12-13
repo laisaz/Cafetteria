@@ -55,7 +55,6 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.lblFazerBusca = new System.Windows.Forms.Label();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
@@ -102,17 +101,6 @@
             this.btnCancelar.TabIndex = 82;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // pcbSair
-            // 
-            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
-            this.pcbSair.Location = new System.Drawing.Point(603, 12);
-            this.pcbSair.Name = "pcbSair";
-            this.pcbSair.Size = new System.Drawing.Size(34, 32);
-            this.pcbSair.TabIndex = 82;
-            this.pcbSair.TabStop = false;
-            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
             // dgvFunc
             // 
