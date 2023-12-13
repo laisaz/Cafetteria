@@ -48,5 +48,10 @@ namespace Cafetteria
                 Application.Exit();
             }
         }
+
+        private void btnCancela_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
