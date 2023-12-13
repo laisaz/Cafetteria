@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProd));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.lblCadProd = new System.Windows.Forms.Label();
@@ -73,6 +74,35 @@
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(657, 17);
             this.pnlBottom.TabIndex = 42;
+            // 
+            // btnCadastrarProd
+            // 
+            this.btnCadastrarProd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCadastrarProd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarProd.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCadastrarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCadastrarProd.Image = global::Cafetteria.Properties.Resources.cadastro__1_;
+            this.btnCadastrarProd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarProd.Location = new System.Drawing.Point(460, 423);
+            this.btnCadastrarProd.Name = "btnCadastrarProd";
+            this.btnCadastrarProd.Size = new System.Drawing.Size(145, 36);
+            this.btnCadastrarProd.TabIndex = 39;
+            this.btnCadastrarProd.Text = "Cadastrar";
+            this.btnCadastrarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarProd.UseVisualStyleBackColor = false;
+            this.btnCadastrarProd.Click += new System.EventHandler(this.btnCadastrarProd_Click);
+            // 
+            // pcbLogoCafe
+            // 
+            this.pcbLogoCafe.Image = global::Cafetteria.Properties.Resources.logo_cafetteria;
+            this.pcbLogoCafe.Location = new System.Drawing.Point(194, 103);
+            this.pcbLogoCafe.Name = "pcbLogoCafe";
+            this.pcbLogoCafe.Size = new System.Drawing.Size(38, 33);
+            this.pcbLogoCafe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogoCafe.TabIndex = 47;
+            this.pcbLogoCafe.TabStop = false;
             // 
             // lblCadProd
             // 
@@ -298,6 +328,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmCadProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

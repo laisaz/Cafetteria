@@ -243,6 +243,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancelar.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

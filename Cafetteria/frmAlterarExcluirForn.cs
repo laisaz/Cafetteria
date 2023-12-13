@@ -37,7 +37,7 @@ namespace Cafetteria
                 String sql = @"update caf.Fornecedor set  CNPJ = @CNPJ, nm_forn = @Nome, razao_social = @Razao, contato_func = @Contato, end_forn = @Endereco)";
 
                 SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-                cmd.Parameters.AddWithValue("CNPJ", txtCPF.Text);
+                cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
                 cmd.Parameters.AddWithValue("Nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("Razao", txtRazaoSocial.Text);
                 cmd.Parameters.AddWithValue("Contato", txtContato.Text);
@@ -81,5 +81,16 @@ namespace Cafetteria
                 ConexaoSQL.Fechar();
             }
         }
+
+        private void btnBuscarCNPJ_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmAlterarExcluirForn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
