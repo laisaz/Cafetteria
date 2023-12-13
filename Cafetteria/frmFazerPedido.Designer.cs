@@ -324,7 +324,7 @@
             // 
             this.txtIDProd.BackColor = System.Drawing.SystemColors.Window;
             this.txtIDProd.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtIDProd.Location = new System.Drawing.Point(333, 321);
+            this.txtIDProd.Location = new System.Drawing.Point(333, 322);
             this.txtIDProd.Name = "txtIDProd";
             this.txtIDProd.Size = new System.Drawing.Size(112, 26);
             this.txtIDProd.TabIndex = 121;

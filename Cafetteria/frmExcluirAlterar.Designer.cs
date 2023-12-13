@@ -101,6 +101,18 @@
             this.btnCancelar.TabIndex = 82;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // pcbSair
+            // 
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(611, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 82;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
             // dgvFunc
             // 
@@ -357,17 +369,6 @@
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // pcbSair
-            // 
-            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
-            this.pcbSair.Location = new System.Drawing.Point(611, 12);
-            this.pcbSair.Name = "pcbSair";
-            this.pcbSair.Size = new System.Drawing.Size(34, 32);
-            this.pcbSair.TabIndex = 82;
-            this.pcbSair.TabStop = false;
-            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
             // 
             // lblFazerBusca
             // 

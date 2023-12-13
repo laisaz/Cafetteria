@@ -83,53 +83,14 @@ namespace Cafetteria
 
         private void btnAltrarExcluir_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                ConexaoSQL.Conectar();
-                string sql = @"delete from caf.Produto where nm_prod = @Nome";
-
-                SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-                cmd.Parameters.AddWithValue("Nome", txtNome.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Produto excluido com sucesso!");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: ", ex.Message);
-                throw;
-            }
-            finally
-            {
-                ConexaoSQL.Fechar();
-            }
-
-            try
-            {
-                String sql = @"update caf.Produto set  Nm_prod = @Nome, desc_prod = @Descricao, 
-                val_prod = @Valor, validade_prod = @Validade, CNPJ = @CNPJ)";
-                SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-                cmd.Parameters.AddWithValue("Nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("Descricao", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("valor", txtValor.Text);
-                cmd.Parameters.AddWithValue("Validade", mskValidade.Text);
-                cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Produto alterado com sucesso");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: ", ex.Message);
-                throw;
-            }
-
+            frmAlterarExcluirProd teste = new frmAlterarExcluirProd();
+            this.Hide();
+            teste.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -41,16 +41,16 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.lblDadosForn = new System.Windows.Forms.Label();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtContato = new System.Windows.Forms.TextBox();
-            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblEnd = new System.Windows.Forms.Label();
             this.lblContato = new System.Windows.Forms.Label();
             this.lblRazaoSocial = new System.Windows.Forms.Label();
             this.lnlNome = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtContato = new System.Windows.Forms.TextBox();
+            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
@@ -96,7 +96,7 @@
             this.lblFazerBusca.AutoSize = true;
             this.lblFazerBusca.Font = new System.Drawing.Font("Kristen ITC", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFazerBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblFazerBusca.Location = new System.Drawing.Point(63, 77);
+            this.lblFazerBusca.Location = new System.Drawing.Point(108, 67);
             this.lblFazerBusca.Name = "lblFazerBusca";
             this.lblFazerBusca.Size = new System.Drawing.Size(73, 22);
             this.lblFazerBusca.TabIndex = 84;
@@ -150,6 +150,7 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(641, 53);
             this.pnlTop.TabIndex = 89;
+            this.pnlTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTop_Paint);
             // 
             // pcbSair
             // 
@@ -179,6 +180,7 @@
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pnlBottom
             // 
@@ -194,39 +196,11 @@
             this.lblDadosForn.AutoSize = true;
             this.lblDadosForn.Font = new System.Drawing.Font("Kristen ITC", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDadosForn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDadosForn.Location = new System.Drawing.Point(64, 209);
+            this.lblDadosForn.Location = new System.Drawing.Point(109, 210);
             this.lblDadosForn.Name = "lblDadosForn";
             this.lblDadosForn.Size = new System.Drawing.Size(119, 36);
             this.lblDadosForn.TabIndex = 91;
             this.lblDadosForn.Text = "Dados \r\ndo Fornecedor:";
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Location = new System.Drawing.Point(112, 323);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(510, 20);
-            this.txtEndereco.TabIndex = 96;
-            // 
-            // txtContato
-            // 
-            this.txtContato.Location = new System.Drawing.Point(483, 291);
-            this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(139, 20);
-            this.txtContato.TabIndex = 93;
-            // 
-            // txtRazaoSocial
-            // 
-            this.txtRazaoSocial.Location = new System.Drawing.Point(483, 263);
-            this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(139, 20);
-            this.txtRazaoSocial.TabIndex = 95;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(112, 291);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(241, 20);
-            this.txtNome.TabIndex = 94;
             // 
             // lblEnd
             // 
@@ -234,7 +208,7 @@
             this.lblEnd.BackColor = System.Drawing.Color.Transparent;
             this.lblEnd.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblEnd.Location = new System.Drawing.Point(12, 322);
+            this.lblEnd.Location = new System.Drawing.Point(9, 302);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(89, 18);
             this.lblEnd.TabIndex = 101;
@@ -246,7 +220,7 @@
             this.lblContato.BackColor = System.Drawing.Color.Transparent;
             this.lblContato.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblContato.Location = new System.Drawing.Point(398, 291);
+            this.lblContato.Location = new System.Drawing.Point(27, 336);
             this.lblContato.Name = "lblContato";
             this.lblContato.Size = new System.Drawing.Size(79, 18);
             this.lblContato.TabIndex = 100;
@@ -258,7 +232,7 @@
             this.lblRazaoSocial.BackColor = System.Drawing.Color.Transparent;
             this.lblRazaoSocial.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazaoSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblRazaoSocial.Location = new System.Drawing.Point(359, 265);
+            this.lblRazaoSocial.Location = new System.Drawing.Point(350, 343);
             this.lblRazaoSocial.Name = "lblRazaoSocial";
             this.lblRazaoSocial.Size = new System.Drawing.Size(118, 18);
             this.lblRazaoSocial.TabIndex = 99;
@@ -270,7 +244,7 @@
             this.lnlNome.BackColor = System.Drawing.Color.Transparent;
             this.lnlNome.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnlNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lnlNome.Location = new System.Drawing.Point(46, 293);
+            this.lnlNome.Location = new System.Drawing.Point(41, 262);
             this.lnlNome.Name = "lnlNome";
             this.lnlNome.Size = new System.Drawing.Size(60, 18);
             this.lnlNome.TabIndex = 98;
@@ -314,18 +288,50 @@
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(112, 262);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(275, 26);
+            this.txtNome.TabIndex = 104;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(112, 294);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(510, 26);
+            this.txtEndereco.TabIndex = 105;
+            // 
+            // txtContato
+            // 
+            this.txtContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContato.Location = new System.Drawing.Point(112, 335);
+            this.txtContato.Name = "txtContato";
+            this.txtContato.Size = new System.Drawing.Size(219, 26);
+            this.txtContato.TabIndex = 106;
+            // 
+            // txtRazaoSocial
+            // 
+            this.txtRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazaoSocial.Location = new System.Drawing.Point(474, 335);
+            this.txtRazaoSocial.Name = "txtRazaoSocial";
+            this.txtRazaoSocial.Size = new System.Drawing.Size(148, 26);
+            this.txtRazaoSocial.TabIndex = 107;
+            // 
             // frmAlterarExcluirForn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(641, 453);
+            this.Controls.Add(this.txtRazaoSocial);
+            this.Controls.Add(this.txtContato);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtContato);
-            this.Controls.Add(this.txtRazaoSocial);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblEnd);
             this.Controls.Add(this.lblContato);
             this.Controls.Add(this.lblRazaoSocial);
@@ -367,10 +373,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Label lblDadosForn;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.TextBox txtContato;
-        private System.Windows.Forms.TextBox txtRazaoSocial;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblEnd;
         private System.Windows.Forms.Label lblContato;
         private System.Windows.Forms.Label lblRazaoSocial;
@@ -378,5 +380,9 @@
         private System.Windows.Forms.TextBox txtCNPJ;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtContato;
+        private System.Windows.Forms.TextBox txtRazaoSocial;
     }
 }

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cafetteria
@@ -83,6 +84,9 @@ namespace Cafetteria
                     DataTable dt = new DataTable();
                     dt.Load(cmd.ExecuteReader());
                     dgvProdutosForn.DataSource = dt;
+
+                    //add aqui
+                    dgvProdutosForn.CellContentClick += dgvProdutosForn_CellContentClick;
                 }
                 catch (Exception ex)
                 {
@@ -94,12 +98,12 @@ namespace Cafetteria
                     ConexaoSQL.Fechar();
                 }
 
-                DataGridViewRow Linha;
+                /*  DataGridViewRow Linha;
                 Linha = dgvProdutosForn.CurrentRow;
                 txtNome.Text = Linha.Cells[2].Value.ToString();
                 txtValor.Text = Linha.Cells[3].Value.ToString();
                 mskValidade.Text = Linha.Cells[4].Value.ToString();
-                txtIDProd.Text = Linha.Cells[0].Value.ToString();
+                txtIDProd.Text = Linha.Cells[0].Value.ToString(); */
 
 
             }
@@ -117,32 +121,9 @@ namespace Cafetteria
             }
             else
             {
-
-                try
-                {
-                    ConexaoSQL.Conectar();
-                    String sql = @"INSERT INTO caf.Estoque VALUES (@Quantidade, @ID)";
-
-                    SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-
-
-                    cmd.Parameters.AddWithValue("Quantidade", txtQuantidade.Text);
-                    cmd.Parameters.AddWithValue("ID", txtIDProd.Text);
-
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Estoque atualizado!");
-
-                    ConexaoSQL.Fechar();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro" + ex.Message);
-                }
-
                 MessageBox.Show("Seu pedido foi encaminhado para o FORNECEDOR com sucesso! Logo logo seu produto irá chegar até você.",
-                    "PEDIDO FEITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                   "PEDIDO FEITO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 txtNome.Clear();
                 txtValor.Clear();
                 //msk
@@ -152,6 +133,27 @@ namespace Cafetteria
                 txtTotalCompra.Clear();
                 txtIDProd.Clear();
 
+                /* try
+                 {
+                     ConexaoSQL.Conectar();
+                     String sql = @"INSERT INTO caf.Estoque VALUES (@Quantidade, @ID)";
+
+                     SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
+
+
+                     cmd.Parameters.AddWithValue("Quantidade", txtQuantidade.Text);
+                     cmd.Parameters.AddWithValue("ID", txtIDProd.Text);
+
+                     cmd.ExecuteNonQuery();
+
+                     MessageBox.Show("Estoque atualizado!");
+
+                     ConexaoSQL.Fechar();
+                 }
+                 catch (Exception ex)
+                 {
+                     MessageBox.Show("Erro" + ex.Message);
+                 } */
             }
         }
 
@@ -164,9 +166,15 @@ namespace Cafetteria
 
         private void dgvProdutosForn_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // dgvProdutosForn.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            //dgvProdutosForn.Rows.Clear();
-            //dgvProdutosForn.Refresh();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow linha = dgvProdutosForn.Rows[e.RowIndex];
+
+                txtNome.Text = linha.Cells[2].Value.ToString();
+                txtValor.Text = linha.Cells[3].Value.ToString();
+                mskValidade.Text = linha.Cells[4].Value.ToString();
+                txtIDProd.Text = linha.Cells[0].Value.ToString();
+            }
         }
     }
 }

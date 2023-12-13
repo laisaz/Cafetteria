@@ -84,10 +84,46 @@ namespace Cafetteria
 
         private void btnBuscarCNPJ_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                ConexaoSQL.Conectar();
+                string sql = @"SELECT * FROM caf.Fornecedor
+                    WHERE CNPJ LIKE '" + txtCNPJ.Text + "%'";
+                SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
+
+                SqlDataReader forn = cmd.ExecuteReader();
+
+                forn.Read();
+
+                txtNome.Text = forn["nm_forn"].ToString();
+                txtContato.Text = forn["contato_forn"].ToString();
+                txtEndereco.Text = forn["end_forn"].ToString();
+                txtRazaoSocial.Text = forn["razao_social"].ToString();
+                forn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            finally
+            {
+                ConexaoSQL.Fechar();
+            }
         }
 
         private void frmAlterarExcluirForn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
+        }
+
+        private void pnlTop_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -24,16 +24,7 @@ namespace Cafetteria
 
         private void pcbSair_Click(object sender, EventArgs e)
         {
-            {
-                DialogResult sair =
-                MessageBox.Show("Você deseja realmente sair do aplicativo?",
-                           "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (sair == DialogResult.Yes)
-                {
-                    Close();
-                }
-            }
         }
 
         private void pcbVoltar_Click(object sender, EventArgs e)
@@ -83,6 +74,18 @@ namespace Cafetteria
             frmFazerPedido pedido = new frmFazerPedido();
             this.Hide();
             pedido.ShowDialog();
+        }
+
+        private void pcbSair_Click_1(object sender, EventArgs e)
+        {
+            DialogResult sair =
+         MessageBox.Show("Você deseja realmente sair do aplicativo?",
+                    "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (sair == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -111,7 +111,9 @@ namespace Cafetteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-           
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
         }
 
         private void btnAltrarExcluir_Click(object sender, EventArgs e)

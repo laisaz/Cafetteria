@@ -20,7 +20,9 @@ namespace Cafetteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            frmMenu menu = new frmMenu();
+            this.Hide();
+            menu.ShowDialog();
         }
 
         private void btnCadastrarForn_Click(object sender, EventArgs e)
@@ -29,10 +31,9 @@ namespace Cafetteria
             {
                 ConexaoSQL.Conectar();
 
-                String sql = @"INSERT INTO caf.Fornecedor VALUES (@CNPJ, @Nome, @Razao, @Contato, @Endereco)";
+                String sql = @"INSERT INTO caf.Fornecedor VALUES (@Nome, @Razao, @Contato, @Endereco)";
 
                 SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-                cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
                 cmd.Parameters.AddWithValue("Nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("Razao", txtRazaoSocial.Text);
                 cmd.Parameters.AddWithValue("Contato", txtContato.Text);
@@ -58,7 +59,9 @@ namespace Cafetteria
 
         private void btnAltrarExcluir_Click(object sender, EventArgs e)
         {
-
+            frmAlterarExcluirForn teste = new frmAlterarExcluirForn();
+            this.Hide();
+            teste.Show();
         }
 
         private void pcbSair_Click(object sender, EventArgs e)

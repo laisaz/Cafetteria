@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlLeft = new System.Windows.Forms.Panel();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.pcbVoltar = new System.Windows.Forms.PictureBox();
             this.lblExpressoEncantado = new System.Windows.Forms.Label();
             this.lblCafetteria = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
@@ -40,52 +38,23 @@
             this.btnCadForn = new System.Windows.Forms.Button();
             this.btnFazerPedido = new System.Windows.Forms.Button();
             this.btnCadProd = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.pcbLogoCafe = new System.Windows.Forms.PictureBox();
+            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.pnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLeft
             // 
             this.pnlLeft.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.pnlLeft.Controls.Add(this.btnLogin);
-            this.pnlLeft.Controls.Add(this.pcbVoltar);
+            this.pnlLeft.Controls.Add(this.pcbSair);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(657, 51);
             this.pnlLeft.TabIndex = 6;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnLogin.Image = global::Cafetteria.Properties.Resources._3364044__1_;
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(597, 12);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(48, 31);
-            this.btnLogin.TabIndex = 26;
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
-            // pcbVoltar
-            // 
-            this.pcbVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbVoltar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
-            this.pcbVoltar.Location = new System.Drawing.Point(12, 12);
-            this.pcbVoltar.Name = "pcbVoltar";
-            this.pcbVoltar.Size = new System.Drawing.Size(34, 32);
-            this.pcbVoltar.TabIndex = 15;
-            this.pcbVoltar.TabStop = false;
-            this.pcbVoltar.Click += new System.EventHandler(this.pcbVoltar_Click);
             // 
             // lblExpressoEncantado
             // 
@@ -177,7 +146,7 @@
             this.btnFazerPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnFazerPedido.Image = global::Cafetteria.Properties.Resources.pedido_online__1_;
             this.btnFazerPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFazerPedido.Location = new System.Drawing.Point(342, 276);
+            this.btnFazerPedido.Location = new System.Drawing.Point(342, 129);
             this.btnFazerPedido.Name = "btnFazerPedido";
             this.btnFazerPedido.Size = new System.Drawing.Size(150, 63);
             this.btnFazerPedido.TabIndex = 4;
@@ -203,24 +172,6 @@
             this.btnCadProd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadProd.UseVisualStyleBackColor = false;
             this.btnCadProd.Click += new System.EventHandler(this.btnCadProd_Click);
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnEstoque.Image = global::Cafetteria.Properties.Resources.caixa_de_entrega__1_;
-            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.Location = new System.Drawing.Point(342, 129);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(150, 63);
-            this.btnEstoque.TabIndex = 1;
-            this.btnEstoque.Text = "ESTOQUE";
-            this.btnEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEstoque.UseVisualStyleBackColor = false;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // btnCaixa
             // 
@@ -250,6 +201,17 @@
             this.pcbLogoCafe.TabIndex = 17;
             this.pcbLogoCafe.TabStop = false;
             // 
+            // pcbSair
+            // 
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(611, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 98;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click_1);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -261,7 +223,6 @@
             this.Controls.Add(this.btnCadForn);
             this.Controls.Add(this.btnFazerPedido);
             this.Controls.Add(this.btnCadProd);
-            this.Controls.Add(this.btnEstoque);
             this.Controls.Add(this.lblMenu);
             this.Controls.Add(this.btnCaixa);
             this.Controls.Add(this.lblExpressoEncantado);
@@ -276,8 +237,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
             this.pnlLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,13 +252,11 @@
         private System.Windows.Forms.PictureBox pcbLogoCafe;
         private System.Windows.Forms.Button btnCaixa;
         private System.Windows.Forms.Label lblMenu;
-        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnCadProd;
         private System.Windows.Forms.Button btnFazerPedido;
         private System.Windows.Forms.Button btnCadForn;
         private System.Windows.Forms.Button btnCadFunc;
-        private System.Windows.Forms.PictureBox pcbVoltar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.PictureBox pcbSair;
     }
 }

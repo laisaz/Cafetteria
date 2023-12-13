@@ -37,8 +37,6 @@
             this.lblContato = new System.Windows.Forms.Label();
             this.lblRazaoSocial = new System.Windows.Forms.Label();
             this.lnlNome = new System.Windows.Forms.Label();
-            this.txtCNPJ = new System.Windows.Forms.TextBox();
-            this.lblCNPJ = new System.Windows.Forms.Label();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pcbSair = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -56,28 +54,28 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(147, 343);
+            this.txtEndereco.Location = new System.Drawing.Point(153, 305);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(476, 26);
             this.txtEndereco.TabIndex = 4;
             // 
             // txtContato
             // 
-            this.txtContato.Location = new System.Drawing.Point(147, 255);
+            this.txtContato.Location = new System.Drawing.Point(153, 217);
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(139, 26);
             this.txtContato.TabIndex = 1;
             // 
             // txtRazaoSocial
             // 
-            this.txtRazaoSocial.Location = new System.Drawing.Point(147, 302);
+            this.txtRazaoSocial.Location = new System.Drawing.Point(153, 264);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(139, 26);
             this.txtRazaoSocial.TabIndex = 3;
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(147, 217);
+            this.txtNome.Location = new System.Drawing.Point(153, 179);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(205, 26);
             this.txtNome.TabIndex = 2;
@@ -88,7 +86,7 @@
             this.lblEnd.BackColor = System.Drawing.Color.Transparent;
             this.lblEnd.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblEnd.Location = new System.Drawing.Point(52, 351);
+            this.lblEnd.Location = new System.Drawing.Point(58, 313);
             this.lblEnd.Name = "lblEnd";
             this.lblEnd.Size = new System.Drawing.Size(89, 18);
             this.lblEnd.TabIndex = 38;
@@ -100,7 +98,7 @@
             this.lblContato.BackColor = System.Drawing.Color.Transparent;
             this.lblContato.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblContato.Location = new System.Drawing.Point(62, 263);
+            this.lblContato.Location = new System.Drawing.Point(68, 225);
             this.lblContato.Name = "lblContato";
             this.lblContato.Size = new System.Drawing.Size(79, 18);
             this.lblContato.TabIndex = 37;
@@ -112,7 +110,7 @@
             this.lblRazaoSocial.BackColor = System.Drawing.Color.Transparent;
             this.lblRazaoSocial.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazaoSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblRazaoSocial.Location = new System.Drawing.Point(23, 306);
+            this.lblRazaoSocial.Location = new System.Drawing.Point(29, 268);
             this.lblRazaoSocial.Name = "lblRazaoSocial";
             this.lblRazaoSocial.Size = new System.Drawing.Size(118, 18);
             this.lblRazaoSocial.TabIndex = 36;
@@ -124,32 +122,11 @@
             this.lnlNome.BackColor = System.Drawing.Color.Transparent;
             this.lnlNome.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lnlNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lnlNome.Location = new System.Drawing.Point(81, 221);
+            this.lnlNome.Location = new System.Drawing.Point(87, 183);
             this.lnlNome.Name = "lnlNome";
             this.lnlNome.Size = new System.Drawing.Size(60, 18);
             this.lnlNome.TabIndex = 35;
             this.lnlNome.Text = "Nome:";
-            // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCNPJ.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtCNPJ.Location = new System.Drawing.Point(147, 174);
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(241, 26);
-            this.txtCNPJ.TabIndex = 0;
-            // 
-            // lblCNPJ
-            // 
-            this.lblCNPJ.AutoSize = true;
-            this.lblCNPJ.BackColor = System.Drawing.Color.Transparent;
-            this.lblCNPJ.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblCNPJ.Location = new System.Drawing.Point(81, 182);
-            this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(53, 18);
-            this.lblCNPJ.TabIndex = 34;
-            this.lblCNPJ.Text = "CNPJ:";
             // 
             // pnlTop
             // 
@@ -295,8 +272,6 @@
             this.Controls.Add(this.lblContato);
             this.Controls.Add(this.lblRazaoSocial);
             this.Controls.Add(this.lnlNome);
-            this.Controls.Add(this.txtCNPJ);
-            this.Controls.Add(this.lblCNPJ);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -323,8 +298,6 @@
         private System.Windows.Forms.Label lblContato;
         private System.Windows.Forms.Label lblRazaoSocial;
         private System.Windows.Forms.Label lnlNome;
-        private System.Windows.Forms.TextBox txtCNPJ;
-        private System.Windows.Forms.Label lblCNPJ;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.PictureBox pcbLimpar;
         private System.Windows.Forms.Button btnCancelar;
