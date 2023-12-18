@@ -32,7 +32,7 @@
             this.pcbSair = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCadProd = new System.Windows.Forms.Label();
-            this.txtNumPedido = new System.Windows.Forms.TextBox();
+            this.txtNumProd = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
@@ -45,17 +45,23 @@
             this.btnCancela = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.lstProd = new System.Windows.Forms.ListBox();
+            this.lstPrice = new System.Windows.Forms.ListBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pnlTop.Controls.Add(this.pcbSair);
+            this.pnlTop.Controls.Add(this.dgvProduct);
             this.pnlTop.Controls.Add(this.btnCancelar);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -92,6 +98,7 @@
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblCadProd
             // 
@@ -105,21 +112,23 @@
             this.lblCadProd.TabIndex = 49;
             this.lblCadProd.Click += new System.EventHandler(this.lblCadProd_Click);
             // 
-            // txtNumPedido
+            // txtNumProd
             // 
-            this.txtNumPedido.BackColor = System.Drawing.Color.PeachPuff;
-            this.txtNumPedido.Location = new System.Drawing.Point(255, 32);
-            this.txtNumPedido.Name = "txtNumPedido";
-            this.txtNumPedido.Size = new System.Drawing.Size(145, 32);
-            this.txtNumPedido.TabIndex = 75;
+            this.txtNumProd.BackColor = System.Drawing.Color.PeachPuff;
+            this.txtNumProd.Location = new System.Drawing.Point(255, 32);
+            this.txtNumProd.Name = "txtNumProd";
+            this.txtNumProd.Size = new System.Drawing.Size(145, 32);
+            this.txtNumProd.TabIndex = 75;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.BurlyWood;
+            this.groupBox1.Controls.Add(this.lstPrice);
+            this.groupBox1.Controls.Add(this.lstProd);
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Controls.Add(this.dgvPedidos);
             this.groupBox1.Controls.Add(this.btnPesquisar);
-            this.groupBox1.Controls.Add(this.txtNumPedido);
+            this.groupBox1.Controls.Add(this.txtNumProd);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Lucida Sans", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SaddleBrown;
@@ -168,6 +177,7 @@
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // lblExpressoEncantado
             // 
@@ -261,6 +271,7 @@
             this.btnComprar.Text = "Comprar";
             this.btnComprar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // pictureBox1
             // 
@@ -272,12 +283,46 @@
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvProduct
+            // 
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Location = new System.Drawing.Point(595, 12);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.Size = new System.Drawing.Size(22, 15);
+            this.dgvProduct.TabIndex = 84;
+            // 
+            // lstProd
+            // 
+            this.lstProd.FormattingEnabled = true;
+            this.lstProd.ItemHeight = 23;
+            this.lstProd.Location = new System.Drawing.Point(102, 97);
+            this.lstProd.Name = "lstProd";
+            this.lstProd.Size = new System.Drawing.Size(175, 119);
+            this.lstProd.TabIndex = 86;
+            // 
+            // lstPrice
+            // 
+            this.lstPrice.FormattingEnabled = true;
+            this.lstPrice.ItemHeight = 23;
+            this.lstPrice.Location = new System.Drawing.Point(331, 97);
+            this.lstPrice.Name = "lstPrice";
+            this.lstPrice.Size = new System.Drawing.Size(175, 119);
+            this.lstPrice.TabIndex = 87;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(114, 422);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(80, 20);
+            this.txtTotal.TabIndex = 90;
+            // 
             // frmCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(645, 467);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.btnCancela);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.txtCPFCliente);
@@ -291,6 +336,7 @@
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCaixa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCaixa";
             this.pnlTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
@@ -298,6 +344,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,7 +356,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblCadProd;
-        private System.Windows.Forms.TextBox txtNumPedido;
+        private System.Windows.Forms.TextBox txtNumProd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.DataGridView dgvPedidos;
@@ -322,5 +369,9 @@
         private System.Windows.Forms.TextBox txtCPFCliente;
         private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Button btnCancela;
+        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.ListBox lstPrice;
+        private System.Windows.Forms.ListBox lstProd;
+        private System.Windows.Forms.TextBox txtTotal;
     }
 }

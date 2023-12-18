@@ -32,35 +32,7 @@ namespace Cafetteria
 
         private void btnCadastrarProd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ConexaoSQL.Conectar();
 
-                String sql = @"INSERT INTO caf.Produto VALUES (@Nome, @Descricao, @Valor, @Validade, @CNPJ)";
-
-                SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-                cmd.Parameters.AddWithValue("Nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("Descricao", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("Valor", txtValor.Text);
-                cmd.Parameters.AddWithValue("Validade", mskValidade.Text);
-                cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
-
-
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Produto cadastrado com sucesso");
-
-                ConexaoSQL.Fechar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro" + ex.Message);
-            }
-            finally
-            {
-                ConexaoSQL.Fechar();
-            }
         }
 
         private void pcbLimpar_Click(object sender, EventArgs e)
@@ -90,7 +62,52 @@ namespace Cafetteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            
+           
+        }
+
+        private void btnCadastrarProd_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                ConexaoSQL.Conectar();
+
+                String sql = @"INSERT INTO caf.Produto VALUES (@Nome, @Descricao, @Valor, @Validade, @CNPJ)";
+
+                SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
+                cmd.Parameters.AddWithValue("Nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("Descricao", txtDescricao.Text);
+                cmd.Parameters.AddWithValue("Valor", txtValor.Text);
+                cmd.Parameters.AddWithValue("Validade", mskValidade.Text);
+                cmd.Parameters.AddWithValue("CNPJ", txtCNPJ.Text);
+
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Produto cadastrado com sucesso");
+
+
+                txtNome.Clear();
+                txtDescricao.Clear();
+                txtValor.Clear();
+                mskValidade.Clear();
+                txtCNPJ.Clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro" + ex.Message);
+            }
+            finally
+            {
+                ConexaoSQL.Fechar();
+            }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            var frmMenu = new frmMenu();
+            this.Hide();
+            frmMenu.Show();
         }
     }
 }

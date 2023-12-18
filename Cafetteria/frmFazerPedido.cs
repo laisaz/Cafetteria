@@ -159,9 +159,9 @@ namespace Cafetteria
 
         private void pcbVoltar_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
+            var frmMenu = new frmMenu();
             this.Hide();
-            menu.ShowDialog();
+            frmMenu.Show();
         }
 
         private void dgvProdutosForn_CellContentClick(object sender, DataGridViewCellEventArgs e)

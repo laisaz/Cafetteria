@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProd));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pcbSair = new System.Windows.Forms.PictureBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.pnlBottom = new System.Windows.Forms.Panel();
             this.lblCadProd = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.btnAltrarExcluir = new System.Windows.Forms.Button();
             this.pcbLimpar = new System.Windows.Forms.PictureBox();
             this.btnCadastrarProd = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
@@ -57,8 +57,8 @@
             // pnlTop
             // 
             this.pnlTop.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.pnlTop.Controls.Add(this.btnVoltar);
             this.pnlTop.Controls.Add(this.pcbSair);
-            this.pnlTop.Controls.Add(this.btnCancelar);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -76,25 +76,6 @@
             this.pcbSair.TabIndex = 83;
             this.pcbSair.TabStop = false;
             this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnCancelar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(12, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(39, 31);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pnlBottom
             // 
@@ -271,7 +252,26 @@
             this.btnCadastrarProd.Text = "Cadastrar";
             this.btnCadastrarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProd.UseVisualStyleBackColor = false;
-            this.btnCadastrarProd.Click += new System.EventHandler(this.btnCadastrarProd_Click);
+            this.btnCadastrarProd.Click += new System.EventHandler(this.btnCadastrarProd_Click_1);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnVoltar.Image = global::Cafetteria.Properties.Resources.botao_voltar__1_;
+            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 11);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(39, 33);
+            this.btnVoltar.TabIndex = 52;
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // frmCadProd
             // 
@@ -279,7 +279,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(657, 492);
             this.Controls.Add(this.txtCNPJ);
             this.Controls.Add(this.txtValor);
@@ -319,7 +318,6 @@
 
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.PictureBox pcbSair;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAltrarExcluir;
         private System.Windows.Forms.PictureBox pcbLimpar;
         private System.Windows.Forms.Panel pnlBottom;
@@ -336,5 +334,6 @@
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.TextBox txtCNPJ;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

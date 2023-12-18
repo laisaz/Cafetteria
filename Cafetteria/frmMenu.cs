@@ -34,58 +34,63 @@ namespace Cafetteria
 
         private void btnCadFunc_Click(object sender, EventArgs e)
         {
-            frmCadFunc cadfun = new frmCadFunc();
+            var frmCadFunc = new frmCadFunc();
             this.Hide();
-            cadfun.ShowDialog();
+            frmCadFunc.Show();
         }
 
         private void btnCaixa_Click(object sender, EventArgs e)
         {
-            frmCaixa caixa = new frmCaixa();
+            var frmCaixa = new frmCaixa();
             this.Hide();
-            caixa.ShowDialog();
+            frmCaixa.Show();
         }
 
         private void btnCadProd_Click(object sender, EventArgs e)
         {
-            frmCadProd cadprod = new frmCadProd();
+            var frmCadProd = new frmCadProd();
             this.Hide();
-            cadprod.ShowDialog();
+            frmCadProd.Show();
         }
 
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            frmEstoque estoque = new frmEstoque();
+            var frmEstoque = new frmEstoque();
             this.Hide();
-            estoque.ShowDialog();
-
+            frmEstoque.Show();
         }
 
         private void btnCadForn_Click(object sender, EventArgs e)
         {
-            frmCadForn cadforn = new frmCadForn();
+            var frmCadForn = new frmCadForn();
             this.Hide();
-            cadforn.ShowDialog();
-            
+            frmCadForn.Show();
+
         }
 
         private void btnFazerPedido_Click(object sender, EventArgs e)
         {
-            frmFazerPedido pedido = new frmFazerPedido();
+            var frmFazerPedido = new frmFazerPedido();
             this.Hide();
-            pedido.ShowDialog();
+            frmFazerPedido.Show();
+
         }
 
         private void pcbSair_Click_1(object sender, EventArgs e)
         {
-            DialogResult sair =
+            DialogResult sair1 =
          MessageBox.Show("Você deseja realmente sair do aplicativo?",
                     "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (sair == DialogResult.Yes)
+            if (sair1 == DialogResult.Yes)
             {
                 Application.Exit();
             }
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

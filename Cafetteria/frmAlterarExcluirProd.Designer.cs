@@ -53,6 +53,7 @@
             this.lblDadosForn = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtIdProd = new System.Windows.Forms.TextBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
@@ -72,6 +73,7 @@
             // 
             this.pnlTop.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pnlTop.Controls.Add(this.pcbSair);
+            this.pnlTop.Controls.Add(this.txtIdProd);
             this.pnlTop.Controls.Add(this.btnVoltar);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -89,6 +91,7 @@
             this.pcbSair.Size = new System.Drawing.Size(34, 32);
             this.pcbSair.TabIndex = 84;
             this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click_1);
             // 
             // btnVoltar
             // 
@@ -107,6 +110,7 @@
             this.btnVoltar.TabIndex = 6;
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnExcluir
             // 
@@ -339,6 +343,13 @@
             this.txtDescricao.Size = new System.Drawing.Size(488, 26);
             this.txtDescricao.TabIndex = 127;
             // 
+            // txtIdProd
+            // 
+            this.txtIdProd.Location = new System.Drawing.Point(588, 14);
+            this.txtIdProd.Name = "txtIdProd";
+            this.txtIdProd.Size = new System.Drawing.Size(22, 26);
+            this.txtIdProd.TabIndex = 85;
+            // 
             // frmAlterarExcluirProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -376,6 +387,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlterarExcluirProd";
             this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             this.ResumeLayout(false);
@@ -408,5 +420,6 @@
         private System.Windows.Forms.Label lblDadosForn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtIdProd;
     }
 }

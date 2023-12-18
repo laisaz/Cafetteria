@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlLeft = new System.Windows.Forms.Panel();
+            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.lblExpressoEncantado = new System.Windows.Forms.Label();
             this.lblCafetteria = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
@@ -40,10 +41,9 @@
             this.btnCadProd = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.pcbLogoCafe = new System.Windows.Forms.PictureBox();
-            this.pcbSair = new System.Windows.Forms.PictureBox();
             this.pnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -55,6 +55,17 @@
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(657, 51);
             this.pnlLeft.TabIndex = 6;
+            // 
+            // pcbSair
+            // 
+            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
+            this.pcbSair.Location = new System.Drawing.Point(611, 12);
+            this.pcbSair.Name = "pcbSair";
+            this.pcbSair.Size = new System.Drawing.Size(34, 32);
+            this.pcbSair.TabIndex = 98;
+            this.pcbSair.TabStop = false;
+            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click_1);
             // 
             // lblExpressoEncantado
             // 
@@ -201,17 +212,6 @@
             this.pcbLogoCafe.TabIndex = 17;
             this.pcbLogoCafe.TabStop = false;
             // 
-            // pcbSair
-            // 
-            this.pcbSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcbSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
-            this.pcbSair.Location = new System.Drawing.Point(611, 12);
-            this.pcbSair.Name = "pcbSair";
-            this.pcbSair.Size = new System.Drawing.Size(34, 32);
-            this.pcbSair.TabIndex = 98;
-            this.pcbSair.TabStop = false;
-            this.pcbSair.Click += new System.EventHandler(this.pcbSair_Click_1);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -236,9 +236,10 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbSair)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogoCafe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

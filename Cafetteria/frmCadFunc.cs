@@ -78,6 +78,14 @@ namespace Cafetteria
 
                 MessageBox.Show("Login feito com sucesso!");
 
+                txtNome.Clear();
+                txtCPF.Clear();
+                txtCargo.Clear();
+                txtContato.Clear();
+                txtSalario.Clear();
+                txtEndereco.Clear();
+                txtSenha.Clear();
+
                 ConexaoSQL.Fechar();
             }
             catch (Exception ex)
@@ -111,14 +119,16 @@ namespace Cafetteria
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
+            var frmMenu = new frmMenu();
             this.Hide();
-            menu.ShowDialog();
+            frmMenu.Show();
         }
 
         private void btnAltrarExcluir_Click(object sender, EventArgs e)
         {
-
+            var frmExcluirAlterar = new frmExcluirAlterar();
+            this.Hide();
+            frmExcluirAlterar.Show();
         }
 
         private void pcbSair_Click(object sender, EventArgs e)

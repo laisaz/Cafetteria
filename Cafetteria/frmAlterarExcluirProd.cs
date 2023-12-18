@@ -43,12 +43,18 @@ namespace Cafetteria
             {
 
                 ConexaoSQL.Conectar();
-                string sql = @"delete from caf.Produto where nm_prod = @Nome";
+                string sql = @"delete from caf.Produto where id_prod = @Nome";
 
                 SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
-                cmd.Parameters.AddWithValue("Nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("Nome", txtIdProd.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Produto excluido com sucesso!");
+
+                txtNome.Clear();
+                txtDescricao.Clear();
+                txtValor.Clear();
+                mskValidade.Clear();
+                txtCnpj.Clear();
 
             }
             catch (Exception ex)
@@ -66,12 +72,16 @@ namespace Cafetteria
         {
             try
             {
-                String sql = @"update caf.Produto set  Nm_prod = @Nome, desc_prod = @Descricao, val_prod = @Valor, validade_prod = @Validade, CNPJ = @CNPJ)";
+
+                ConexaoSQL.Conectar();
+
+                String sql = @"update caf.Produto set desc_prod = @Descricao, nm_prod = @Nome, val_prod = @Valor, validade_prod = @Validade, CNPJ = @CNPJ where id_prod = @id";
 
                 SqlCommand cmd = new SqlCommand(sql, ConexaoSQL.conn);
+                cmd.Parameters.AddWithValue("id", txtIdProd.Text);
                 cmd.Parameters.AddWithValue("Nome", txtNome.Text);
                 cmd.Parameters.AddWithValue("Descricao", txtDescricao.Text);
-                cmd.Parameters.AddWithValue("valor", txtValor.Text);
+                cmd.Parameters.AddWithValue("valor", Convert.ToDecimal(txtValor.Text));
                 cmd.Parameters.AddWithValue("Validade", mskValidade.Text);
                 cmd.Parameters.AddWithValue("CNPJ", txtCnpj.Text);
 
@@ -88,7 +98,7 @@ namespace Cafetteria
                 txtValor.Clear();
                 mskValidade.Text = "";
 
-                txtNome.Focus();
+                ConexaoSQL.Fechar();
             }
             catch (Exception ex)
             {
@@ -110,6 +120,7 @@ namespace Cafetteria
 
                 prod.Read();
 
+                txtIdProd.Text = prod["id_prod"].ToString();
                 txtNomeProduto.Text = prod["nm_prod"].ToString();
                 txtDescricao.Text = prod["desc_prod"].ToString();
                 txtValor.Text = prod["val_prod"].ToString();
@@ -125,6 +136,25 @@ namespace Cafetteria
             {
                 ConexaoSQL.Fechar();
             }
+        }
+
+        private void pcbSair_Click_1(object sender, EventArgs e)
+        {
+            DialogResult sair =
+       MessageBox.Show("Você deseja realmente sair do aplicativo?",
+                  "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (sair == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            var frmCadProd = new frmCadProd();
+            this.Hide();
+            frmCadProd.Show();
         }
     }
 }

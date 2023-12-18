@@ -46,12 +46,9 @@ namespace Cafetteria
                 {
                     //Abrir o sistema - LOGIN EFETUADO
                     dr.Read();
-                    frmMenu menu = new frmMenu();
-                    Visible = false;
-                    menu.ShowDialog();
-                    Visible = true;
-                    txtSenha.Clear();
-                    txtLogin.Clear();
+                    var frmMenu = new frmMenu();
+                    this.Hide();
+                    frmMenu.Show();
                 }
                 else
                 {
@@ -62,18 +59,6 @@ namespace Cafetteria
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-         DialogResult sair =
-         MessageBox.Show("Você deseja realmente sair do aplicativo?",
-                    "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (sair == DialogResult.Yes)
-            {
-                Close();
             }
         }
 

@@ -124,6 +124,7 @@
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Image = global::Cafetteria.Properties.Resources.fechar__1_;
